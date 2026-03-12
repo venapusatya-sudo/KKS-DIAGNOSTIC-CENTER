@@ -17,38 +17,54 @@ margin:0;
 background:#f4f7fb;
 }
 
+/* HEADER */
+
 header{
 background:#0a4d8c;
 color:white;
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:15px 8%;
 }
 
 nav a{
 color:white;
-margin:10px;
+margin:12px;
 text-decoration:none;
+font-weight:500;
 }
+
+/* HERO */
 
 .hero{
 height:450px;
-background:url("biological-research.jpg") center/cover;
+background:url("https://upload.wikimedia.org/wikipedia/commons/8/8f/Medical_Laboratory_Science.jpg") center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
+flex-direction:column;
 text-align:center;
 color:white;
-flex-direction:column;
+padding:20px;
 }
 
 .hero h1{
-font-size:42px;
+font-size:40px;
 }
+
+.hero p{
+font-size:20px;
+max-width:600px;
+}
+
+/* SECTION */
 
 section{
 padding:60px 10%;
 }
+
+/* GALLERY */
 
 .gallery{
 display:grid;
@@ -60,6 +76,8 @@ gap:20px;
 width:100%;
 border-radius:10px;
 }
+
+/* SEARCH */
 
 .searchbox{
 text-align:center;
@@ -73,9 +91,12 @@ border:2px solid #0a4d8c;
 border-radius:6px;
 }
 
+/* TEST LIST */
+
 .testItem{
 display:flex;
 justify-content:space-between;
+align-items:center;
 background:white;
 padding:12px;
 margin:8px 0;
@@ -86,10 +107,13 @@ box-shadow:0 2px 8px rgba(0,0,0,0.1);
 .bookBtn{
 background:#25D366;
 color:white;
-border:blue;
+border:none;
 padding:8px 14px;
-border-radius:5px;
+border-radius:6px;
+cursor:pointer;
 }
+
+/* PACKAGES */
 
 .packages{
 display:grid;
@@ -106,9 +130,15 @@ overflow:hidden;
 
 .card img{
 width:100%;
-height:180px;
+height:170px;
 object-fit:cover;
 }
+
+.card h3{
+padding:10px;
+}
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -118,6 +148,12 @@ right:20px;
 
 .whatsapp img{
 width:60px;
+}
+
+iframe{
+width:100%;
+height:300px;
+border:0;
 }
 
 </style>
@@ -145,9 +181,9 @@ width:60px;
 
 <section class="hero">
 
-<h1>KKS Diagnostic Center</h1>
+<h1>Advanced Medical Laboratory</h1>
 
-<p>"Accurate Diagnosis Saves Lives"</p>
+<p>"Early diagnosis leads to better treatment and a healthier life."</p>
 
 </section>
 
@@ -155,33 +191,31 @@ width:60px;
 
 <section>
 
-<h2>Advanced Laboratory Testing</h2>
-
-<img src="microscope-lab.jpg" width="100%" style="border-radius:10px">
+<h2>Reliable Diagnostic Services</h2>
 
 <p>
 
-We provide accurate laboratory testing using advanced microscopes and modern diagnostic equipment.
+We provide accurate and affordable diagnostic testing with modern laboratory equipment and trained professionals.
 
 </p>
 
 </section>
 
-<!-- GALLERY -->
+<!-- LAB GALLERY -->
 
 <section>
 
-<h2>Our Laboratory Services</h2>
+<h2>Our Laboratory</h2>
 
 <div class="gallery">
 
-<img src="blood-sample.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Laboratory_microscope.jpg">
 
-<img src="microscope-lab.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Blood_sample_lab.jpg">
 
-<img src="lab-research.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Medical_lab_research.jpg">
 
-<img src="biological-research.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Clinical_Laboratory.jpg">
 
 </div>
 
@@ -195,7 +229,7 @@ We provide accurate laboratory testing using advanced microscopes and modern dia
 
 <div class="searchbox">
 
-<input type="text" id="searchTest" placeholder="Search diagnostic test...">
+<input type="text" id="searchTest" placeholder="Search any diagnostic test...">
 
 </div>
 
@@ -203,136 +237,20 @@ We provide accurate laboratory testing using advanced microscopes and modern dia
 
 <div class="testItem">
 <span>CBC</span>
-<a href="https://wa.me/919177317999?text=I want CBC test"><button class="bookBtn">Book Test</button></a>
+<a href="https://wa.me/919177317999?text=I want CBC Test"><button class="bookBtn">Book Test</button></a>
 </div>
 
 <div class="testItem">
 <span>Hemoglobin</span>
-<a href="https://wa.me/919177317999?text=I want Hemoglobin test"><button class="bookBtn">Book Test</button></a>
+<a href="https://wa.me/919177317999?text=I want Hemoglobin Test"><button class="bookBtn">Book Test</button></a>
 </div>
 
 <div class="testItem">
 <span>Blood Sugar</span>
-<a href="https://wa.me/919177317999?text=I want Blood Sugar test"><button class="bookBtn">Book Test</button></a>
+<a href="https://wa.me/919177317999?text=I want Blood Sugar Test"><button class="bookBtn">Book Test</button></a>
 </div>
 
 <div class="testItem">
 <span>HbA1c</span>
-<a href="https://wa.me/919177317999?text=I want HbA1c test"><button class="bookBtn">Book Test</button></a>
-</div>
-
-<div class="testItem">
-<span>Vitamin D3</span>
-<a href="https://wa.me/919177317999?text=I want Vitamin D3 test"><button class="bookBtn">Book Test</button></a>
-</div>
-
-</div>
-
-</section>
-
-<!-- PACKAGES -->
-
-<section id="packages">
-
-<h2>Health Packages</h2>
-
-<div class="packages">
-
-<div class="card">
-
-<img src="blood-sample.jpg">
-
-<h3>Fever Profile</h3>
-
-<p style="padding:10px">CBC + Widal + Malaria</p>
-
-</div>
-
-<div class="card">
-
-<img src="lab-research.jpg">
-
-<h3>Diabetic Profile</h3>
-
-<p style="padding:10px">HbA1c + Glucose</p>
-
-</div>
-
-<div class="card">
-
-<img src="microscope-lab.jpg">
-
-<h3>Master Health Checkup</h3>
-
-<p style="padding:10px">Complete body check</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- HOME SAMPLE -->
-
-<section>
-
-<h2>Home Sample Collection</h2>
-
-<img src="blood-sample.jpg" width="100%" style="border-radius:10px">
-
-<p>
-
-Our trained technicians collect blood samples safely at your home.
-
-</p>
-
-<a href="https://wa.me/919177317999?text=I want home sample collection">
-
-<button class="bookBtn">Book Home Sample</button>
-
-</a>
-
-</section>
-
-<!-- MAP -->
-
-<section id="contact">
-
-<h2>Our Location</h2>
-
-<iframe src="https://maps.google.com/maps?q=Vadapalli%20Andhra%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300"></iframe>
-
-</section>
-
-<!-- WHATSAPP -->
-
-<a class="whatsapp" href="https://wa.me/919177317999">
-
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-
-</a>
-
-<script>
-
-document.getElementById("searchTest").addEventListener("keyup", function(){
-
-let filter=this.value.toLowerCase();
-let items=document.querySelectorAll(".testItem");
-
-items.forEach(function(item){
-
-let text=item.innerText.toLowerCase();
-
-if(text.includes(filter))
-item.style.display="flex";
-else
-item.style.display="none";
-
-});
-
-});
-
-</script>
-
-</body>
-</html>
+<a href="https://wa.me/919177317999?text=I want HbA1c Test"><button class="bookBtn">Book Test</button></a>
+</
