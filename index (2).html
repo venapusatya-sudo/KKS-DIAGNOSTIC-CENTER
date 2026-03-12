@@ -1,375 +1,566 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KKS Diagnostic Center</title>
 
 <style>
 
-body{
-font-family:Arial;
-margin:0;
-background:#f4f6fb;
+/* GENERAL */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f9fc;
+  color: #333;
 }
 
-header{
-background:#0077b6;
-color:white;
-text-align:center;
-padding:20px;
+h1, h2, h3 {
+  color: #0077b6;
 }
 
-.banner img{
-width:100%;
-height:300px;
-object-fit:cover;
+/* NAVIGATION */
+
+nav {
+  background: #0077b6;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-.container{
-padding:40px;
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+nav li {
+  margin: 0 15px;
 }
 
-.card{
-background:white;
-padding:20px;
-border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.card img{
-width:100%;
-height:160px;
-object-fit:cover;
-border-radius:6px;
+/* BANNER */
+
+.banner img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
 }
 
-.quote{
-background:#caf0f8;
-text-align:center;
-padding:30px;
-font-size:20px;
+/* SECTIONS */
+
+section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.packages{
-background:#f1faff;
-padding:40px;
-text-align:center;
+/* QUOTE */
+
+.quote {
+  text-align: center;
+  font-size: 22px;
+  font-style: italic;
+  padding: 30px;
+  background: #e0f7fa;
+  color: #0077b6;
+  border-radius: 8px;
+  margin: 20px;
 }
 
-.package-container{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
+/* CARDS GRID */
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.package-card{
-background:white;
-padding:20px;
-width:230px;
-border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+/* CARD */
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: 0.3s ease;
 }
 
-.package-card h4{
-color:#25D366;
+.card:hover {
+  transform: scale(1.05);
 }
 
-.package-card a{
-display:inline-block;
-padding:10px 15px;
-background:#25D366;
-color:white;
-text-decoration:none;
-border-radius:5px;
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
-.booking{
-background:#eaf6ff;
-padding:40px;
-text-align:center;
+/* BUTTONS */
+
+button, .btn {
+  background: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
 }
 
-.booking input,.booking select{
-width:90%;
-max-width:400px;
-padding:12px;
-margin:8px;
-border-radius:5px;
-border:1px solid #ccc;
+button:hover, .btn:hover {
+  background: #1ebc59;
 }
 
-.booking button{
-background:#25D366;
-color:white;
-padding:12px 20px;
-border:none;
-border-radius:5px;
+/* SEARCH */
+
+.search {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.login{
-text-align:center;
-padding:40px;
-background:#f4f4f4;
+.search input {
+  width: 80%;
+  max-width: 420px;
+  padding: 10px;
+  border: 2px solid #0077b6;
+  border-radius: 6px;
 }
 
-.login input{
-display:block;
-margin:10px auto;
-padding:10px;
-width:250px;
+/* WHATSAPP FLOATING CHAT */
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
 }
 
-.map{
-padding:40px;
+/* LOGIN */
+
+.login input {
+  width: 80%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 10px;
 }
 
-iframe{
-width:100%;
-height:350px;
-border:0;
-border-radius:8px;
+/* MAP */
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 8px;
 }
 
-footer{
-background:#03045e;
-color:white;
-text-align:center;
-padding:20px;
-}
+/* RESPONSIVE */
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-}
-
-.whatsapp img{
-width:60px;
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
-
-<h1>KKS DIAGNOSTIC CENTER</h1>
-
-<p>📞 9177 317 999</p>
-
-<p>📧 kksdiagnosticcenter@gmail.com</p>
-
-<p>
-SHOP NO.4, DURGAMMA TALLI TEMPLE VS COMPLEX  
-MAIN ROAD, VADAPALLI - 533238
-</p>
-
-<p><b>24x7 Diagnostic Services Available</b></p>
-
-</header>
-
-<div class="banner">
-
-<img src="https://images.unsplash.com/photo-1580281658629-7c8c9e1b9baf">
-
-</div>
-
-<div class="quote">
-
-“Accurate Diagnosis Is The First Step Toward The Right Treatment.”
-
-</div>
-
-<div class="container">
-
-<h2>Our Diagnostic Services</h2>
-
-<div class="services">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1579165466741-7f35e4755187">
-
-<h3>Haematology</h3>
-
-<p>CBC, HB, RBC, WBC, PLT, ESR</p>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b">
-
-<h3>Urine Tests</h3>
-
-<p>Urine Analysis, Albumin, Sugar, Pregnancy Test</p>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
-
-<h3>Biochemistry</h3>
-
-<p>Glucose, HbA1c, Cholesterol, Creatinine</p>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12">
-
-<h3>Thyroid Tests</h3>
-
-<p>T3, T4, TSH</p>
-
-</div>
-
-</div>
-
-</div>
-
-<section class="packages">
-
-<h2>Health Packages</h2>
-
-<div class="package-container">
-
-<div class="package-card">
-
-<h3>Fever Profile</h3>
-
-<p>Malaria, Widal, CBC</p>
-
-<h4>₹499</h4>
-
-<a href="https://wa.me/919177317999?text=I%20want%20to%20book%20Fever%20Profile">Book</a>
-
-</div>
-
-<div class="package-card">
-
-<h3>Diabetic Profile</h3>
-
-<p>HbA1c, Sugar F & PP</p>
-
-<h4>₹799</h4>
-
-<a href="https://wa.me/919177317999?text=I%20want%20to%20book%20Diabetic%20Profile">Book</a>
-
-</div>
-
-<div class="package-card">
-
-<h3>Lipid Profile</h3>
-
-<p>Cholesterol Tests</p>
-
-<h4>₹699</h4>
-
-<a href="https://wa.me/919177317999?text=I%20want%20to%20book%20Lipid%20Profile">Book</a>
-
-</div>
-
-<div class="package-card">
-
-<h3>Master Health Checkup</h3>
-
-<p>Full Body Checkup</p>
-
-<h4>₹1999</h4>
-
-<a href="https://wa.me/919177317999?text=I%20want%20to%20book%20Master%20Checkup">Book</a>
-
-</div>
-
-</div>
-
+<!-- NAVIGATION -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#tests">Tests</a></li>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#book">Book Test</a></li>
+    <li><a href="#login">Login</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER + BANNER -->
+<section id="home">
+  <header style="text-align:center; padding: 40px;">
+    <h1>KKS Diagnostic Center</h1>
+    <p><b>24x7 Diagnostic Services</b> | Vadapalli, Andhra Pradesh</p>
+    <p>📞 9177317999 | 📧 kksdiagnosticcenter@gmail.com</p>
+  </header>
+
+  <div class="banner">
+    <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=1350&q=80" alt="Medical Lab Banner">
+  </div>
 </section>
 
-<section class="booking">
-
-<h2>Book Test on WhatsApp</h2>
-
-<input type="text" id="name" placeholder="Patient Name">
-
-<input type="tel" id="phone" placeholder="Phone Number">
-
-<select id="test">
-
-<option>CBC</option>
-<option>Blood Sugar</option>
-<option>Thyroid Test</option>
-<option>Lipid Profile</option>
-
-</select>
-
-<button onclick="send()">Book Test</button>
-
+<section class="quote">
+  “Early diagnosis can change the course of life. Your health matters — and we’re here to support you with precision and care.”
 </section>
 
-<section class="login">
-
-<h2>Patient Login</h2>
-
-<input type="text" placeholder="Patient ID">
-
-<input type="password" placeholder="Password">
-
-<button>Login</button>
-
-</section>
-
-<div class="map">
-
-<h2>Find Us on Google Map</h2>
-
-<iframe src="https://maps.google.com/maps?q=Vadapalli%20Andhra%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-
+<!-- TEST SEARCH -->
+<section id="tests">
+  <h2 style="text-align:center">Diagnostic Tests</h2>
+  <div class="search">
+    <input type="text" id="search" placeholder="Search for any test..." onkeyup="searchTest()">
+  </div>
+  <ul id="testList">
+    <li>CBC</li>
+    <li>Complete Hemogram</li>
+    <li>Blood Sugar</li>
+    <li>HbA1c</li>
+    <li>Thyroid Panel (TSH, T3, T4)</li>
+    <li>Lipid Profile</li>
+    <li>Vitamin D3</li>
+    <li>Vitamin B12</li>
+    <li>Liver Function Tests</li>
+    <li>Kidney Function Tests</li>
+    <li>Urine Analysis</li>
+    <li>Dengue Test</li>
+    <li>Widal Test</li>
+    <li>HIV Test</li>
+    <li>HbsAg</li>
+    <li>CRP</li>
+    <li>Ferritin</li>
+<div>
+  <div>
+    <h3>HAEMATOLOGY</h3>
+    <ul>
+      <li>[ ] Complete Haemogram</li>
+      <li>[ ] CBC</li>
+      <li>[ ] HB</li>
+      <li>[ ] RBC</li>
+      <li>[ ] PCV</li>
+      <li>[ ] MCV</li>
+      <li>[ ] MCH</li>
+      <li>[ ] MCHC</li>
+      <li>[ ] RDW</li>
+      <li>[ ] WBC</li>
+      <li>[ ] PLT</li>
+      <li>[ ] Absolute Eosinophil Count</li>
+      <li>[ ] Blood Grouping/Rh Typing</li>
+      <li>[ ] Bleeding/Clotting Time</li>
+      <li>[ ] Smear for MP/MF</li>
+      <li>[ ] Mantoux Test</li>
+      <li>[ ] Reticulocytes Count</li>
+      <li>[ ] Rh Antibody Titre</li>
+      <li>[ ] D-Dimer</li>
+      <li>[ ] ESR</li>
+    </ul>
+  </div>
+  <div>
+    <h3>URINE</h3>
+    <ul>
+      <li>[ ] Urine Complete Analysis</li>
+      <li>[ ] Urine Acetone</li>
+      <li>[ ] Urine Albumin</li>
+      <li>[ ] Urine Sugar (F, PP)</li>
+      <li>[ ] Urine Bile Salts</li>
+      <li>[ ] Urine Urobilinogen</li>
+      <li>[ ] 24 Hours Urine Protein</li>
+      <li>[ ] Urine Pregnancy Test</li>
+    </ul>
+  </div>
+  <div>
+    <h3>MOTION</h3>
+    <ul>
+      <li>[ ] Motion Routine Analysis</li>
+      <li>[ ] Reducing Substances</li>
+      <li>[ ] Occult Blood</li>
+    </ul>
+  </div>
+  <div>
+    <h3>MICROSCOPY</h3>
+    <ul>
+      <li>[ ] Peripheral Smear/Study</li>
+      <li>[ ] Smear for MP (Malaria)</li>
+      <li>[ ] Sputum Gram's Stain</li>
+    </ul>
+  </div>
+  <div>
+    <h3>IMMUNOLOGY</h3>
+    <ul>
+      <li>[ ] ANA</li>
+      <li>[ ] IgA</li>
+      <li>[ ] IgE</li>
+      <li>[ ] Anti dsDNA</li>
+      <li>[ ] C3</li>
+      <li>[ ] C4</li>
+      <li>[ ] Cardiolipin Ab IgG, IgM</li>
+      <li>[ ] Anti-Phospholipid IgG, IgM</li>
+      <li>[ ] Coombs Test - Direct</li>
+      <li>[ ] Coombs Test - Indirect</li>
+    </ul>
+    <p>Any Other Tests, Kindly Mention:</p>
+  </div>
 </div>
 
-<footer>
+<div>
+  <div>
+    <h3>BIOCHEMISTRY</h3>
+    <ul>
+      <li>[ ] Glucose - Fasting</li>
+      <li>[ ] Glucose - PP</li>
+      <li>[ ] Gluco-Random</li>
+      <li>[ ] HbA1c</li>
+      <li>[ ] GCT</li>
+      <li>[ ] GTT</li>
+      <li>[ ] Urea</li>
+      <li>[ ] Creatinine</li>
+      <li>[ ] Uric Acid</li>
+      <li>[ ] Total Cholesterol</li>
+      <li>[ ] Triglycerides</li>
+      <li>[ ] HDL</li>
+      <li>[ ] LDL</li>
+      <li>[ ] Albumin</li>
+      <li>[ ] Bilirubin - Total</li>
+      <li>[ ] Bilirubin - Direct & Indirect</li>
+      <li>[ ] SGOT (AST)</li>
+      <li>[ ] SGPT (ALT)</li>
+      <li>[ ] Alkaline Phosphatase</li>
+      <li>[ ] Gamma GT</li>
+      <li>[ ] Calcium</li>
+      <li>[ ] Phosphorous</li>
+      <li>[ ] Magnesium</li>
+      <li>[ ] Ferritin</li>
+      <li>[ ] Vitamin D3</li>
+      <li>[ ] Vitamin B12</li>
+      <li>[ ] Electrolytes</li>
+      <li>[ ] Na/K/Cl/HCO3</li>
+    </ul>
+  </div>
+  <div>
+    <h3>CULTURE & SENSITIVITY</h3>
+    <ul>
+      <li>[ ] Blood Culture</li>
+      <li>[ ] Urine Culture</li>
+      <li>[ ] Stool Culture</li>
+      <li>[ ] Sputum Culture</li>
+      <li>[ ] Throat Swab</li>
+      <li>[ ] Ear Swab</li>
+      <li>[ ] PUS</li>
+      <li>[ ] Other (specify)</li>
+    </ul>
+  </div>
+  <div>
+    <h3>COAGULATION</h3>
+    <ul>
+      <li>[ ] D-Dimer</li>
+      <li>[ ] PT-INR</li>
+      <li>[ ] APTT</li>
+      <li>[ ] Fibrinogen</li>
+    </ul>
+  </div>
+</div>
 
-<p>KKS Diagnostic Center</p>
+<div>
+  <div>
+    <h3>ENDOCRINOLOGY</h3>
+    <ul>
+      <li>[ ] T3, T4, TSH</li>
+      <li>[ ] FreeT3</li>
+      <li>[ ] FreeT4</li>
+      <li>[ ] TSH</li>
+      <li>[ ] FSH</li>
+      <li>[ ] LH</li>
+      <li>[ ] Thyroglobulin</li>
+      <li>[ ] Thyroid Microsomal</li>
+      <li>[ ] Progesterone</li>
+      <li>[ ] Estradiol</li>
+      <li>[ ] Testosterone</li>
+      <li>[ ] Free Testosterone</li>
+      <li>[ ] Beta HCG</li>
+      <li>[ ] Cortisol AM</li>
+      <li>[ ] Cortisol PM</li>
+      <li>[ ] Folic Acid</li>
+      <li>[ ] C-Peptide</li>
+      <li>[ ] C-Peptide (PP)</li>
+      <li>[ ] 17-Ketosteroids (24 Hrs Urine)</li>
+      <li>[ ] 5-HIAA (24 Hrs Urine)</li>
+    </ul>
+  </div>
+  <div>
+    <h3>SEROLOGY</h3>
+    <ul>
+      <li>[ ] WIDAL</li>
+      <li>[ ] VDRL</li>
+      <li>[ ] TPHA</li>
+      <li>[ ] HbsAg</li>
+      <li>[ ] ASO</li>
+      <li>[ ] CRP</li>
+      <li>[ ] Serum Amylase</li>
+      <li>[ ] Serum Lipase</li>
+      <li>[ ] Rheumatoid Factor (RA)</li>
+      <li>[ ] Dengue IgG/IgM & Ns1Ag</li>
+      <li>[ ] Chickungunya IgM</li>
+      <li>[ ] Scrub Typhus IgG & IgM</li>
+      <li>[ ] Leptospira IgG & IgM</li>
+      <li>[ ] Malaria PF/PV Ag</li>
+      <li>[ ] RPR Slide Test</li>
+      <li>[ ] HIV 1/2</li>
+      <li>[ ] Anti HCV</li>
+      <li>[ ] Anti HIV</li>
+    </ul>
+  </div>
+  <div>
+    <h3>PRENATAL SCREENING</h3>
+    <ul>
+      <li>[ ] Free Beta HCG</li>
+      <li>[ ] PAPP-A</li>
+      <li>[ ] AFP</li>
+      <li>[ ] 3-Estriol</li>
+    </ul>
+  </div>
+  <div>
+    <h3>COAGULATION</h3>
+    <ul>
+      <li>[ ] Troponin - I</li>
+      <li>[ ] Troponin - T</li>
+      <li>[ ] Torch Panel (IgG & IgM)</li>
+      <li>[ ] QuantiFERON - TB Gold</li>
+    </ul>
+  </div>
+</div>
 
-<p>Test results should be interpreted by qualified doctors.</p>
+<div>
+  <div>
+    <h3>FEVER TESTS (Basic)</h3>
+    <p>(WBC, Malaria, WIDAL, Urine Routine Analysis)</p>
+  </div>
+  <div>
+    <h3>CARDIAC TESTS</h3>
+    <p>(ECG, Echo, Troponin-I, Troponin-T)</p>
+  </div>
+  <div>
+    <h3>LIPID PROFILE</h3>
+    <p>(Total Cholesterol, Triglycerides, HDL, LDL, VLDL)</p>
+  </div>
+  <div>
+    <h3>DIABETIC PROFILE</h3>
+    <p>(HbA1c, Glucose (F), Glucose (PP), Urine Sugar (F), Urine Sugar (PP))</p>
+  </div>
+  <div>
+    <h3>LIVER FUNCTION TESTS</h3>
+    <p>(Serum Albumin, Alkaline Phosphatase, HbsAg, Bilirubin - Total, Bilirubin - Direct & Indirect, SGOT (AST), SGPT (ALT))</p>
+  </div>
+  <div>
+    <h3>KIDNEY FUNCTION TESTS</h3>
+    <p>(Creatinine, Urea, Uric Acid, Complete Urine Analysis)</p>
+  </div>
+  <div>
+    <h3>COVID-19 CARE TESTS</h3>
+    <p>(CBC, CRP, D-Dimer, Serum Ferritin, LDH, SpO2, Blood Pressure, ECG)</p>
+  </div>
+  <div>
+    <h3>CANCER MARKER TESTS</h3>
+    <p>(CA-125, CEA, AFP, CA19-9, HPV Ag, PSA, Fecal Occult Blood (FOB))</p>
+  </div>
+  <div>
+    <h3>PREGNANCY ROUTINE TESTS</h3>
+    <p>(UPT, Haemoglobin, LFT, RFT, Blood Grouping & Rh Typing, Blood Sugar (R), GCT/OGTT, Blood Urea, Serum Creatinine, Bleeding/Clotting Time, ESR, HIV1&2, VDRL, HbsAg, FT3, FT4, TSH BP, SpO2, Urine Albumin, Urine Sugar)</p>
+  </div>
+  <div>
+    <ul>
+      <li>[ ] ECG in all Leads</li>
+    </ul>
+  </div>
+  <div>
+    <h3>MASTER HEALTH CHECK-UP</h3>
+  </div>
+</div>
+    <!-- Add more here -->
+  </ul>
+</section>
 
-</footer>
+<!-- PACKAGES -->
+<section id="packages">
+  <h2 style="text-align:center">Health Packages</h2>
+  <div class="grid">
 
-<a class="whatsapp" href="https://wa.me/919177317999">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1579165466741-7f35e4755187?auto=format&fit=crop&w=800&q=80" alt="Blood Sample">
+      <h3>Fever Profile</h3>
+      <p>Malaria, Widal, CBC</p>
+      <p><b>₹499</b></p>
+      <a class="btn" href="https://wa.me/919177317999?text=I want Fever Profile">Book Now</a>
+    </div>
 
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="Lab Technician">
+      <h3>Diabetic Profile</h3>
+      <p>HbA1c, Glucose F/PP</p>
+      <p><b>₹799</b></p>
+      <a class="btn" href="https://wa.me/919177317999?text=I want Diabetic Profile">Book Now</a>
+    </div>
 
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12?auto=format&fit=crop&w=800&q=80" alt="Lab Equipment">
+      <h3>Master Health Checkup</h3>
+      <p>Complete Body Health Check</p>
+      <p><b>₹1999</b></p>
+      <a class="btn" href="https://wa.me/919177317999?text=I want Master Health Checkup">Book Now</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- BOOK FORM -->
+<section id="book">
+  <h2 style="text-align:center">Book Test</h2>
+  <div style="text-align:center;">
+    <input type="text" id="name" placeholder="Your Name"><br><br>
+    <input type="tel" id="phone" placeholder="Phone Number"><br><br>
+    <select id="testSelect">
+      <option>Select Test</option>
+      <option>CBC</option>
+      <option>Lipid Profile</option>
+      <option>Thyroid Test</option>
+    </select><br><br>
+    <button onclick="bookTest()">Book on WhatsApp</button>
+  </div>
+</section>
+
+<!-- LOGIN -->
+<section id="login" style="text-align:center;">
+  <h2>Patient Login</h2>
+  <input type="text" placeholder="Patient ID"><br>
+  <input type="password" placeholder="Password"><br><br>
+  <button>Login</button>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 style="text-align:center">Find Us</h2>
+  <iframe src="https://maps.google.com/maps?q=Vadapalli%20Andhra%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<!-- WHATSAPP CHAT -->
+<a class="whatsapp" href="https://wa.me/9197317999">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Chat">
 </a>
 
 <script>
-
-function send(){
-
-var name=document.getElementById("name").value;
-var phone=document.getElementById("phone").value;
-var test=document.getElementById("test").value;
-
-var message="Hello KKS Diagnostic Center %0A Name:"+name+"%0A Phone:"+phone+"%0A Test:"+test;
-
-window.open("https://wa.me/919177317999?text="+message);
-
+function searchTest() {
+  let input = document.getElementById("search").value.toLowerCase();
+  document.querySelectorAll("#testList li").forEach(function(item) {
+    item.style.display = item.innerText.toLowerCase().includes(input) ? "" : "none";
+  });
 }
-
+function bookTest() {
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let test = document.getElementById("testSelect").value;
+  window.open("https://wa.me/9197317999?text=Hello%20KKS%20Diagnostic%20Center%2C%20I%20want%20to%20book%20" + test + "%20for%20" + name + "%20(" + phone + ")");
+}
 </script>
 
 </body>
-
 </html>
