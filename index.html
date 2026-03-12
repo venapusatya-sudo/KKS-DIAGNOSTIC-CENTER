@@ -7,15 +7,14 @@
 
 <title>KKS Diagnostic Center</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-font-family:'Open Sans',sans-serif;
+font-family:'Poppins',sans-serif;
 background:#ffffff;
-color:#333;
 }
 
 /* HEADER */
@@ -26,7 +25,10 @@ justify-content:space-between;
 align-items:center;
 padding:15px 8%;
 background:white;
-border-bottom:1px solid #eee;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .logo{
@@ -36,7 +38,7 @@ gap:10px;
 }
 
 .logo img{
-height:60px;
+height:55px;
 }
 
 .logo h2{
@@ -44,20 +46,23 @@ color:#0b63ce;
 margin:0;
 }
 
-/* NAVIGATION */
-
 nav a{
 margin:0 12px;
 text-decoration:none;
-color:#333;
 font-weight:600;
+color:#333;
 }
 
-/* HERO BANNER */
+/* HERO */
 
 .hero{
-height:450px;
-background:url("https://https://https://photos.app.goo.gl/VsfcRBTTSyiS9sCw6") center/cover no-repeat;) center/cover no-repeat;
+height:480px;
+
+background:
+linear-gradient(rgba(0,90,170,0.6),rgba(0,90,170,0.6)),
+url("https://images.pexels.com/photos/8460049/pexels-photo-8460049.jpeg")
+center/cover no-repeat;
+
 display:flex;
 align-items:center;
 justify-content:center;
@@ -66,10 +71,11 @@ color:white;
 }
 
 .hero h1{
-font-size:40px;
-background:rgba(0,0,0,0.5);
-padding:20px;
-border-radius:10px;
+font-size:44px;
+}
+
+.hero p{
+font-size:18px;
 }
 
 /* SECTIONS */
@@ -84,24 +90,10 @@ color:#0b63ce;
 margin-bottom:30px;
 }
 
-/* LAB GALLERY */
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.gallery img{
-width:100%;
-border-radius:8px;
-}
-
 /* SEARCH */
 
 .searchBox{
 text-align:center;
-margin-bottom:20px;
 }
 
 .searchBox input{
@@ -112,13 +104,11 @@ border-radius:6px;
 font-size:16px;
 }
 
-/* TEST RESULT */
-
 .test{
 display:flex;
 justify-content:space-between;
-background:#f2f7ff;
-padding:12px;
+padding:10px;
+background:#f3f7ff;
 margin:6px 0;
 border-radius:6px;
 }
@@ -127,7 +117,7 @@ border-radius:6px;
 background:#25D366;
 color:white;
 border:none;
-padding:8px 15px;
+padding:7px 15px;
 border-radius:6px;
 cursor:pointer;
 }
@@ -141,19 +131,32 @@ gap:20px;
 }
 
 .card{
-border:1px solid #eee;
 border-radius:10px;
 overflow:hidden;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
 .card img{
 width:100%;
-height:180px;
+height:170px;
 object-fit:cover;
 }
 
 .card h3{
 padding:10px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:8px;
 }
 
 /* WHATSAPP FLOAT */
@@ -187,7 +190,7 @@ border-radius:10px;
 
 <div class="logo">
 
-<img src="https://photos.app.goo.gl/fxdGnog3q4hMDQAN9">
+<img src="logo.png">
 
 <h2>KKS Diagnostic Center</h2>
 
@@ -209,33 +212,18 @@ border-radius:10px;
 
 <section class="hero">
 
-<h1>Trusted Diagnostic Testing for Better Health</h1>
+<div>
 
-</section>
+<h1>Accurate Diagnostic Testing</h1>
 
-
-<!-- LAB IMAGES -->
-
-<section>
-
-<h2>Our Laboratory Services</h2>
-
-<div class="gallery">
-
-<img src="https://images.unsplash.com/photo-1579154204601-01588f351e67">
-
-<img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074">
-
-<img src="https://images.unsplash.com/photo-1579165466741-7f35e4755660">
-
-<img src="https://images.unsplash.com/photo-1582719368397-4a2a6e2a1f0d">
+<p>Reliable Results • Advanced Laboratory • Trusted Care</p>
 
 </div>
 
 </section>
 
 
-<!-- SEARCH TEST -->
+<!-- SEARCH TESTS -->
 
 <section id="tests">
 
@@ -243,7 +231,7 @@ border-radius:10px;
 
 <div class="searchBox">
 
-<input type="text" id="searchInput" placeholder="Search diagnostic tests">
+<input type="text" id="searchInput" placeholder="Search 200+ diagnostic tests">
 
 </div>
 
@@ -252,7 +240,7 @@ border-radius:10px;
 </section>
 
 
-<!-- PACKAGES -->
+<!-- HEALTH PACKAGES -->
 
 <section id="packages">
 
@@ -262,28 +250,31 @@ border-radius:10px;
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b">
+<img src="https://images.pexels.com/photos/8460157/pexels-photo-8460157.jpeg">
 
 <h3>Fever Profile</h3>
+
 <p style="padding:10px;">CBC + Widal + Malaria</p>
 
 </div>
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<img src="https://images.pexels.com/photos/7088488/pexels-photo-7088488.jpeg">
 
-<h3>Diabetic Profile</h3>
+<h3>Diabetes Check</h3>
+
 <p style="padding:10px;">HbA1c + Blood Sugar</p>
 
 </div>
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1582719478170-3c1b9e8a6c3f">
+<img src="https://images.pexels.com/photos/3786157/pexels-photo-3786157.jpeg">
 
-<h3>Master Health Check</h3>
-<p style="padding:10px;">Complete Body Checkup</p>
+<h3>Full Body Checkup</h3>
+
+<p style="padding:10px;">Complete Health Screening</p>
 
 </div>
 
@@ -292,21 +283,48 @@ border-radius:10px;
 </section>
 
 
-<!-- HOME SAMPLE COLLECTION -->
+<!-- LAB GALLERY -->
+
+<section>
+
+<h2>Our Laboratory</h2>
+
+<div class="gallery">
+
+<img src="https://images.pexels.com/photos/3825581/pexels-photo-3825581.jpeg">
+
+<img src="https://images.pexels.com/photos/3786157/pexels-photo-3786157.jpeg">
+
+<img src="https://images.pexels.com/photos/7088488/pexels-photo-7088488.jpeg">
+
+<img src="https://images.pexels.com/photos/8460049/pexels-photo-8460049.jpeg">
+
+</div>
+
+</section>
+
+
+<!-- HOME COLLECTION -->
 
 <section>
 
 <h2>Home Sample Collection</h2>
 
-<p style="text-align:center;">
-We provide home blood sample collection services for your convenience.
+<p style="text-align:center">
+
+Book blood sample collection from home easily via WhatsApp.
+
 </p>
 
-<div style="text-align:center;">
+<div style="text-align:center">
 
 <a href="https://wa.me/919177317999?text=I want home sample collection">
 
-<button class="bookBtn">Book Home Collection</button>
+<button class="bookBtn">
+
+Book Home Collection
+
+</button>
 
 </a>
 
@@ -315,19 +333,18 @@ We provide home blood sample collection services for your convenience.
 </section>
 
 
-<!-- LOCATION -->
+<!-- CONTACT -->
 
 <section id="contact">
 
 <h2>Contact & Location</h2>
 
-<p style="text-align:center;">
+<p style="text-align:center">
 
-📍 Shop No. 4, Durgamma Talli Temple VS Complex  
+📍 Shop No.4, Durgamma Talli Temple VS Complex  
 Main Road, Vadapalli – 533238  
 
-📞 Phone: 9177 317 999  
-✉ Email: kksdiagnosticcenter@gmail.com  
+📞 9177317999  
 
 </p>
 
@@ -349,21 +366,17 @@ Main Road, Vadapalli – 533238
 
 const tests=[
 
-"CBC","Hemoglobin","RBC","WBC","Platelet Count",
-"Blood Sugar","HbA1c","Vitamin D3","Vitamin B12",
-"Thyroid TSH","T3","T4","Lipid Profile","Cholesterol",
-"Triglycerides","HDL","LDL","Urea","Creatinine",
-"Uric Acid","Ferritin","Calcium","Magnesium",
-"Urine Routine","Urine Culture","Blood Culture",
-"CRP","ESR","HIV","HbsAg","Dengue Test",
-"Malaria Test","Widal Test","Troponin","Bilirubin",
-"SGOT","SGPT"
+"CBC","Hemoglobin","RBC","WBC","Platelet Count","Blood Sugar","HbA1c","Vitamin D3","Vitamin B12",
+"Thyroid TSH","T3","T4","Lipid Profile","Cholesterol","Triglycerides","HDL","LDL","Urea","Creatinine",
+"Uric Acid","Ferritin","Calcium","Magnesium","CRP","ESR","HIV","HbsAg","Dengue","Malaria","Widal",
+"Troponin","Bilirubin","SGOT","SGPT"
 
 ];
 
 document.getElementById("searchInput").addEventListener("keyup",function(){
 
 let keyword=this.value.toLowerCase();
+
 let results=tests.filter(t=>t.toLowerCase().includes(keyword));
 
 let html="";
