@@ -1,11 +1,11 @@
 <!DOCTYPE html><html lang="en">
 <head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Advanced Diagnostic Laboratory</title><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>KKS Diagnosis Centre</title><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
 
 body{
 margin:0;
-font-family:'Roboto',sans-serif;
-background:#ffffff;
+font-family:'Open Sans',sans-serif;
+background:white;
 color:#333;
 }
 
@@ -17,7 +17,7 @@ justify-content:space-between;
 align-items:center;
 padding:15px 8%;
 background:white;
-border-bottom:1px solid #e6e6e6;
+border-bottom:1px solid #eee;
 }
 
 .logo{
@@ -30,34 +30,29 @@ nav a{
 margin:0 10px;
 text-decoration:none;
 color:#333;
-font-weight:500;
+font-weight:600;
 }
 
 /* HERO */
 
 .hero{
-height:460px;
-background:linear-gradient(rgba(255,255,255,0.95),rgba(255,255,255,0.95)),
-url("https://cdn-icons-png.flaticon.com/512/3774/3774299.png") center/contain no-repeat,#eaf2ff;
+height:450px;
+background:url("https://images.unsplash.com/photo-1581594693702-fbdc51b2763b") center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
-flex-direction:column;
 text-align:center;
-padding:20px;
+color:white;
 }
 
 .hero h1{
-color:#0b63ce;
-font-size:40px;
+font-size:42px;
+background:rgba(0,0,0,0.5);
+padding:20px;
+border-radius:8px;
 }
 
-.hero p{
-font-size:18px;
-max-width:650px;
-}
-
-/* SECTION */
+/* SECTIONS */
 
 section{
 padding:60px 10%;
@@ -65,15 +60,15 @@ padding:60px 10%;
 
 h2{
 text-align:center;
-margin-bottom:30px;
 color:#0b63ce;
+margin-bottom:30px;
 }
 
 /* GALLERY */
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
@@ -86,7 +81,7 @@ border-radius:8px;
 
 .searchBox{
 text-align:center;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
 .searchBox input{
@@ -96,13 +91,12 @@ border:1px solid #ccc;
 border-radius:6px;
 }
 
-/* TEST LIST */
+/* TEST RESULT */
 
 .test{
 display:flex;
 justify-content:space-between;
-align-items:center;
-background:#f5f8ff;
+background:#f3f7ff;
 padding:12px;
 margin:6px 0;
 border-radius:6px;
@@ -117,7 +111,7 @@ border-radius:6px;
 cursor:pointer;
 }
 
-/* PACKAGES */
+/* PACKAGE */
 
 .packages{
 display:grid;
@@ -126,10 +120,10 @@ gap:20px;
 }
 
 .card{
+background:white;
 border:1px solid #eee;
 border-radius:10px;
 overflow:hidden;
-background:white;
 }
 
 .card img{
@@ -162,68 +156,37 @@ height:320px;
 border:0;
 }
 
-</style></head><body><header><div class="logo">Diagnostic Laboratory</div><nav>
-<a href="#">Home</a>
+</style></head><body><header><div class="logo">KKS Diagnosis Centre</div><nav><a href="#">Home</a>
 <a href="#tests">Tests</a>
 <a href="#packages">Packages</a>
 <a href="#contact">Contact</a>
-</nav></header><section class="hero"><h1>Modern Diagnostic Testing</h1><p>Accurate laboratory reports with trusted medical diagnostics and advanced testing technology.</p></section><section><h2>Our Laboratory</h2><div class="gallery"><img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png"><img src="https://cdn-icons-png.flaticon.com/512/2785/2785544.png"><img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png"><img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png"><img src="https://cdn-icons-png.flaticon.com/512/4812/4812441.png"><img src="https://cdn-icons-png.flaticon.com/512/2920/2920063.png"></div></section><section id="tests"><h2>Search Diagnostic Tests</h2><div class="searchBox"><input type="text" id="searchInput" placeholder="Search any diagnostic test..."></div><div id="testList"></div></section><section id="packages"><h2>Popular Health Packages</h2><div class="packages"><div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/2785/2785539.png">
-<h3>Fever Profile</h3>
-<p style="padding:10px">CBC + Malaria + Widal</p>
-</div><div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/4320/4320371.png">
-<h3>Diabetic Profile</h3>
-<p style="padding:10px">HbA1c + Blood Sugar</p>
-</div><div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/4812/4812441.png">
-<h3>Master Health Check</h3>
-<p style="padding:10px">Complete Body Screening</p>
-</div></div></section><section><h2>Home Sample Collection</h2><p style="text-align:center">Safe and convenient blood sample collection from your home.
+
+</nav></header><!-- HERO --><section class="hero"><h1>Advanced Medical Diagnostic Testing</h1></section><!-- LAB IMAGES --><section><h2>Our Laboratory</h2><div class="gallery"><img src="https://images.unsplash.com/photo-1579154204601-01588f351e67"><img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074"><img src="https://images.unsplash.com/photo-1579165466741-7f35e4755660"><img src="https://images.unsplash.com/photo-1582719368397-4a2a6e2a1f0d"></div></section><!-- SEARCH TEST --><section id="tests"><h2>Search Diagnostic Tests</h2><div class="searchBox"><input type="text" id="searchInput" placeholder="Search test name"></div><div id="testList"></div></section><!-- PACKAGES --><section id="packages"><h2>Health Packages</h2><div class="packages"><div class="card"><img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b"><h3>Fever Profile</h3><p style="padding:10px">CBC + Widal + Malaria</p></div><div class="card"><img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074"><h3>Diabetic Profile</h3><p style="padding:10px">HbA1c + Blood Sugar</p></div><div class="card"><img src="https://images.unsplash.com/photo-1579154204601-01588f351e67"><h3>Master Health Check</h3><p style="padding:10px">Complete Body Checkup</p></div></div></section><!-- HOME COLLECTION --><section><h2>Home Sample Collection</h2><p style="text-align:center">Book home blood sample collection easily.
 
 </p><div style="text-align:center"><a href="https://wa.me/919177317999?text=I want home sample collection"><button class="bookBtn">Book Home Collection</button>
 
-</a></div></section><section id="contact"><h2>Our Location</h2><iframe src="https://maps.google.com/maps?q=Andhra%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe></section><a class="whatsapp" href="https://wa.me/919177317999"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"></a><script>
+</a></div></section><!-- MAP --><section id="contact"><h2>Our Location</h2><iframe src="https://maps.google.com/maps?q=Ravulapalem&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe></section><!-- WHATSAPP --><a class="whatsapp" href="https://wa.me/919177317999"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"></a><script>
 
 const tests = [
 
-"Complete Haemogram","CBC","HB","RBC","PCV","MCV","MCH","MCHC","RDW","WBC",
-"Platelet Count","Absolute Eosinophil Count","Blood Grouping","Bleeding Time",
-"Clotting Time","Reticulocyte Count","D-Dimer","ESR",
-
-"Urine Complete Analysis","Urine Albumin","Urine Sugar","Urine Pregnancy Test",
-"Urine Culture","24 Hour Urine Protein",
-
-"Glucose Fasting","Glucose PP","Random Blood Sugar","HbA1c",
-"Urea","Creatinine","Uric Acid","Total Cholesterol","Triglycerides",
-"HDL","LDL","Albumin","Bilirubin Total","SGOT","SGPT",
-"Alkaline Phosphatase","Gamma GT","Calcium","Phosphorus",
-"Magnesium","Ferritin","Vitamin D3","Vitamin B12","Electrolytes",
-
-"Blood Culture","Urine Culture","Stool Culture","Sputum Culture",
-
-"PT INR","APTT","Fibrinogen",
-
-"T3","T4","TSH","Free T3","Free T4","FSH","Progesterone",
-"Estradiol","Testosterone","Beta HCG","Cortisol","C Peptide",
-
-"Widal","VDRL","HbsAg","CRP","Rheumatoid Factor",
-"Dengue Test","Chikungunya Test","Scrub Typhus Test",
-"Malaria Antigen Test","HIV 1 & 2","Anti HCV",
-
-"Troponin I","Troponin T","Torch Panel","TB Gold Test"
+"CBC","Hemoglobin","RBC","WBC","Platelet Count","Blood Sugar","HbA1c","Vitamin D3",
+"Vitamin B12","Thyroid TSH","T3","T4","Lipid Profile","Cholesterol","Triglycerides",
+"HDL","LDL","Urea","Creatinine","Uric Acid","Ferritin","Calcium","Magnesium",
+"Urine Routine","Urine Culture","Blood Culture","CRP","ESR","HIV","HbsAg",
+"Dengue Test","Malaria Test","Widal Test","Troponin","Bilirubin","SGOT","SGPT"
 
 ];
 
-const list=document.getElementById("testList");
+document.getElementById("searchInput").addEventListener("keyup", function(){
 
-function showTests(data){
+let keyword = this.value.toLowerCase();
+let results = tests.filter(t => t.toLowerCase().includes(keyword));
 
-list.innerHTML="";
+let html="";
 
-data.forEach(test=>{
+results.forEach(test=>{
 
-list.innerHTML += `
+html+=`
 
 <div class="test">
 
@@ -241,17 +204,7 @@ list.innerHTML += `
 
 });
 
-}
-
-showTests(tests);
-
-document.getElementById("searchInput").addEventListener("keyup",function(){
-
-let keyword=this.value.toLowerCase();
-
-let filtered = tests.filter(t => t.toLowerCase().includes(keyword));
-
-showTests(filtered);
+document.getElementById("testList").innerHTML=html;
 
 });
 
