@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en">
 <head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>KKS Diagnostic Laboratory</title><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Advanced Diagnostic Laboratory</title><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"><style>
 
 body{
-font-family:'Roboto',sans-serif;
 margin:0;
+font-family:'Roboto',sans-serif;
 background:#ffffff;
 color:#333;
 }
@@ -12,32 +12,33 @@ color:#333;
 /* HEADER */
 
 header{
-background:#ffffff;
-border-bottom:1px solid #e5e5e5;
-padding:15px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:15px 8%;
+background:white;
+border-bottom:1px solid #e6e6e6;
 }
 
 .logo{
-font-size:22px;
+font-size:24px;
 font-weight:700;
-color:#0b5ed7;
+color:#0b63ce;
 }
 
 nav a{
-margin:10px;
+margin:0 10px;
 text-decoration:none;
 color:#333;
 font-weight:500;
 }
 
-/* HERO BANNER */
+/* HERO */
 
 .hero{
-height:420px;
-background:url("https://png.pngtree.com/png-clipart/20230917/original/pngtree-lab-technician-doing-blood-test-png-image_12570861.png") center/contain no-repeat,#f4f8ff;
+height:460px;
+background:linear-gradient(rgba(255,255,255,0.95),rgba(255,255,255,0.95)),
+url("https://cdn-icons-png.flaticon.com/512/3774/3774299.png") center/contain no-repeat,#eaf2ff;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -47,16 +48,16 @@ padding:20px;
 }
 
 .hero h1{
+color:#0b63ce;
 font-size:40px;
-color:#0b5ed7;
 }
 
 .hero p{
 font-size:18px;
-max-width:600px;
+max-width:650px;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
 padding:60px 10%;
@@ -65,13 +66,14 @@ padding:60px 10%;
 h2{
 text-align:center;
 margin-bottom:30px;
+color:#0b63ce;
 }
 
 /* GALLERY */
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
 gap:20px;
 }
 
@@ -99,7 +101,8 @@ border-radius:6px;
 .test{
 display:flex;
 justify-content:space-between;
-background:#f8f9fa;
+align-items:center;
+background:#f5f8ff;
 padding:12px;
 margin:6px 0;
 border-radius:6px;
@@ -107,9 +110,9 @@ border-radius:6px;
 
 .bookBtn{
 background:#25D366;
-border:none;
-padding:7px 12px;
 color:white;
+border:none;
+padding:8px 14px;
 border-radius:6px;
 cursor:pointer;
 }
@@ -118,7 +121,7 @@ cursor:pointer;
 
 .packages{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
@@ -159,39 +162,56 @@ height:320px;
 border:0;
 }
 
-</style></head><body><header><div class="logo">KKS Diagnostic Laboratory</div><nav><a href="#">Home</a>
+</style></head><body><header><div class="logo">Diagnostic Laboratory</div><nav>
+<a href="#">Home</a>
 <a href="#tests">Tests</a>
 <a href="#packages">Packages</a>
 <a href="#contact">Contact</a>
-
-</nav></header><section class="hero"><h1>Advanced Medical Diagnostic Laboratory</h1><p>Accurate reports, modern laboratory equipment and trusted healthcare diagnostics.</p></section><section><h2>Our Laboratory Services</h2><div class="gallery"><img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png"><img src="https://cdn-icons-png.flaticon.com/512/2785/2785544.png"><img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png"><img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png"></div></section><section id="tests"><h2>Search Diagnostic Tests</h2><div class="searchBox">
-<input type="text" id="searchInput" placeholder="Search tests like CBC, Hemoglobin, Blood Sugar">
-</div><div id="testList"></div></section><section id="packages"><h2>Popular Health Packages</h2><div class="packages"><div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png">
+</nav></header><section class="hero"><h1>Modern Diagnostic Testing</h1><p>Accurate laboratory reports with trusted medical diagnostics and advanced testing technology.</p></section><section><h2>Our Laboratory</h2><div class="gallery"><img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png"><img src="https://cdn-icons-png.flaticon.com/512/2785/2785544.png"><img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png"><img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png"><img src="https://cdn-icons-png.flaticon.com/512/4812/4812441.png"><img src="https://cdn-icons-png.flaticon.com/512/2920/2920063.png"></div></section><section id="tests"><h2>Search Diagnostic Tests</h2><div class="searchBox"><input type="text" id="searchInput" placeholder="Search any diagnostic test..."></div><div id="testList"></div></section><section id="packages"><h2>Popular Health Packages</h2><div class="packages"><div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/2785/2785539.png">
 <h3>Fever Profile</h3>
-<p style="padding:10px">CBC, Malaria, Widal</p>
+<p style="padding:10px">CBC + Malaria + Widal</p>
 </div><div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png">
+<img src="https://cdn-icons-png.flaticon.com/512/4320/4320371.png">
 <h3>Diabetic Profile</h3>
-<p style="padding:10px">HbA1c, Fasting Sugar</p>
+<p style="padding:10px">HbA1c + Blood Sugar</p>
 </div><div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/2785/2785544.png">
+<img src="https://cdn-icons-png.flaticon.com/512/4812/4812441.png">
 <h3>Master Health Check</h3>
-<p style="padding:10px">Complete body check</p>
-</div></div></section><section><h2>Home Sample Collection</h2><p style="text-align:center">Book blood sample collection at your home safely and easily.
+<p style="padding:10px">Complete Body Screening</p>
+</div></div></section><section><h2>Home Sample Collection</h2><p style="text-align:center">Safe and convenient blood sample collection from your home.
 
 </p><div style="text-align:center"><a href="https://wa.me/919177317999?text=I want home sample collection"><button class="bookBtn">Book Home Collection</button>
 
-</a></div></section><section id="contact"><h2>Find Our Lab</h2><iframe src="https://maps.google.com/maps?q=Andhra%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe></section><a class="whatsapp" href="https://wa.me/919177317999"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"></a><script>
+</a></div></section><section id="contact"><h2>Our Location</h2><iframe src="https://maps.google.com/maps?q=Andhra%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe></section><a class="whatsapp" href="https://wa.me/919177317999"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"></a><script>
 
-const tests=[
+const tests = [
 
-"CBC","Hemoglobin","Blood Sugar","HbA1c","Vitamin D3","Vitamin B12",
-"Widal","Malaria Test","Dengue Test","Thyroid TSH","Lipid Profile",
-"Urea","Creatinine","Uric Acid","Calcium","Magnesium",
-"Urine Routine","Urine Culture","Blood Culture",
-"Ferritin","Troponin","CRP","ESR","HIV","HbsAg",
-"SGOT","SGPT","Bilirubin","Albumin"
+"Complete Haemogram","CBC","HB","RBC","PCV","MCV","MCH","MCHC","RDW","WBC",
+"Platelet Count","Absolute Eosinophil Count","Blood Grouping","Bleeding Time",
+"Clotting Time","Reticulocyte Count","D-Dimer","ESR",
+
+"Urine Complete Analysis","Urine Albumin","Urine Sugar","Urine Pregnancy Test",
+"Urine Culture","24 Hour Urine Protein",
+
+"Glucose Fasting","Glucose PP","Random Blood Sugar","HbA1c",
+"Urea","Creatinine","Uric Acid","Total Cholesterol","Triglycerides",
+"HDL","LDL","Albumin","Bilirubin Total","SGOT","SGPT",
+"Alkaline Phosphatase","Gamma GT","Calcium","Phosphorus",
+"Magnesium","Ferritin","Vitamin D3","Vitamin B12","Electrolytes",
+
+"Blood Culture","Urine Culture","Stool Culture","Sputum Culture",
+
+"PT INR","APTT","Fibrinogen",
+
+"T3","T4","TSH","Free T3","Free T4","FSH","Progesterone",
+"Estradiol","Testosterone","Beta HCG","Cortisol","C Peptide",
+
+"Widal","VDRL","HbsAg","CRP","Rheumatoid Factor",
+"Dengue Test","Chikungunya Test","Scrub Typhus Test",
+"Malaria Antigen Test","HIV 1 & 2","Anti HCV",
+
+"Troponin I","Troponin T","Torch Panel","TB Gold Test"
 
 ];
 
@@ -203,7 +223,7 @@ list.innerHTML="";
 
 data.forEach(test=>{
 
-list.innerHTML+=`
+list.innerHTML += `
 
 <div class="test">
 
@@ -229,7 +249,7 @@ document.getElementById("searchInput").addEventListener("keyup",function(){
 
 let keyword=this.value.toLowerCase();
 
-let filtered=tests.filter(t=>t.toLowerCase().includes(keyword));
+let filtered = tests.filter(t => t.toLowerCase().includes(keyword));
 
 showTests(filtered);
 
