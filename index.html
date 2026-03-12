@@ -1,114 +1,115 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>KKS Diagnostic Center</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
+<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>KKS Diagnostic Laboratory</title><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"><style>
 
 body{
-font-family:'Poppins',sans-serif;
+font-family:'Roboto',sans-serif;
 margin:0;
-background:#f4f7fb;
+background:#ffffff;
+color:#333;
 }
 
 /* HEADER */
 
 header{
-background:#0a4d8c;
-color:white;
+background:#ffffff;
+border-bottom:1px solid #e5e5e5;
+padding:15px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 8%;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+color:#0b5ed7;
 }
 
 nav a{
-color:white;
-margin:12px;
+margin:10px;
 text-decoration:none;
+color:#333;
 font-weight:500;
 }
 
-/* HERO */
+/* HERO BANNER */
 
 .hero{
-height:450px;
-background:url("https://upload.wikimedia.org/wikipedia/commons/8/8f/Medical_Laboratory_Science.jpg") center/cover no-repeat;
+height:420px;
+background:url("https://png.pngtree.com/png-clipart/20230917/original/pngtree-lab-technician-doing-blood-test-png-image_12570861.png") center/contain no-repeat,#f4f8ff;
 display:flex;
 align-items:center;
 justify-content:center;
 flex-direction:column;
 text-align:center;
-color:white;
 padding:20px;
 }
 
 .hero h1{
 font-size:40px;
+color:#0b5ed7;
 }
 
 .hero p{
-font-size:20px;
+font-size:18px;
 max-width:600px;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 section{
 padding:60px 10%;
+}
+
+h2{
+text-align:center;
+margin-bottom:30px;
 }
 
 /* GALLERY */
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 }
 
 .gallery img{
 width:100%;
-border-radius:10px;
+border-radius:8px;
 }
 
 /* SEARCH */
 
-.searchbox{
+.searchBox{
 text-align:center;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
-.searchbox input{
+.searchBox input{
 width:60%;
 padding:12px;
-border:2px solid #0a4d8c;
+border:1px solid #ccc;
 border-radius:6px;
 }
 
 /* TEST LIST */
 
-.testItem{
+.test{
 display:flex;
 justify-content:space-between;
-align-items:center;
-background:white;
+background:#f8f9fa;
 padding:12px;
-margin:8px 0;
+margin:6px 0;
 border-radius:6px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
 .bookBtn{
 background:#25D366;
-color:white;
 border:none;
-padding:8px 14px;
+padding:7px 12px;
+color:white;
 border-radius:6px;
 cursor:pointer;
 }
@@ -117,20 +118,20 @@ cursor:pointer;
 
 .packages{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;
 }
 
 .card{
-background:white;
+border:1px solid #eee;
 border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
 overflow:hidden;
+background:white;
 }
 
 .card img{
 width:100%;
-height:170px;
+height:180px;
 object-fit:cover;
 }
 
@@ -150,107 +151,89 @@ right:20px;
 width:60px;
 }
 
+/* MAP */
+
 iframe{
 width:100%;
-height:300px;
+height:320px;
 border:0;
 }
 
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<h2>KKS Diagnostic Center</h2>
-
-<nav>
-
-<a href="#">Home</a>
+</style></head><body><header><div class="logo">KKS Diagnostic Laboratory</div><nav><a href="#">Home</a>
 <a href="#tests">Tests</a>
 <a href="#packages">Packages</a>
 <a href="#contact">Contact</a>
 
-</nav>
+</nav></header><section class="hero"><h1>Advanced Medical Diagnostic Laboratory</h1><p>Accurate reports, modern laboratory equipment and trusted healthcare diagnostics.</p></section><section><h2>Our Laboratory Services</h2><div class="gallery"><img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png"><img src="https://cdn-icons-png.flaticon.com/512/2785/2785544.png"><img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png"><img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png"></div></section><section id="tests"><h2>Search Diagnostic Tests</h2><div class="searchBox">
+<input type="text" id="searchInput" placeholder="Search tests like CBC, Hemoglobin, Blood Sugar">
+</div><div id="testList"></div></section><section id="packages"><h2>Popular Health Packages</h2><div class="packages"><div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png">
+<h3>Fever Profile</h3>
+<p style="padding:10px">CBC, Malaria, Widal</p>
+</div><div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png">
+<h3>Diabetic Profile</h3>
+<p style="padding:10px">HbA1c, Fasting Sugar</p>
+</div><div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/2785/2785544.png">
+<h3>Master Health Check</h3>
+<p style="padding:10px">Complete body check</p>
+</div></div></section><section><h2>Home Sample Collection</h2><p style="text-align:center">Book blood sample collection at your home safely and easily.
 
-</header>
+</p><div style="text-align:center"><a href="https://wa.me/919177317999?text=I want home sample collection"><button class="bookBtn">Book Home Collection</button>
 
-<!-- HERO -->
+</a></div></section><section id="contact"><h2>Find Our Lab</h2><iframe src="https://maps.google.com/maps?q=Andhra%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe></section><a class="whatsapp" href="https://wa.me/919177317999"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"></a><script>
 
-<section class="hero">
+const tests=[
 
-<h1>Advanced Medical Laboratory</h1>
+"CBC","Hemoglobin","Blood Sugar","HbA1c","Vitamin D3","Vitamin B12",
+"Widal","Malaria Test","Dengue Test","Thyroid TSH","Lipid Profile",
+"Urea","Creatinine","Uric Acid","Calcium","Magnesium",
+"Urine Routine","Urine Culture","Blood Culture",
+"Ferritin","Troponin","CRP","ESR","HIV","HbsAg",
+"SGOT","SGPT","Bilirubin","Albumin"
 
-<p>"Early diagnosis leads to better treatment and a healthier life."</p>
+];
 
-</section>
+const list=document.getElementById("testList");
 
-<!-- ABOUT -->
+function showTests(data){
 
-<section>
+list.innerHTML="";
 
-<h2>Reliable Diagnostic Services</h2>
+data.forEach(test=>{
 
-<p>
+list.innerHTML+=`
 
-We provide accurate and affordable diagnostic testing with modern laboratory equipment and trained professionals.
+<div class="test">
 
-</p>
+<span>${test}</span>
 
-</section>
+<a href="https://wa.me/919177317999?text=I want to book ${test} test">
 
-<!-- LAB GALLERY -->
+<button class="bookBtn">Book Test</button>
 
-<section>
-
-<h2>Our Laboratory</h2>
-
-<div class="gallery">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Laboratory_microscope.jpg">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Blood_sample_lab.jpg">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Medical_lab_research.jpg">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Clinical_Laboratory.jpg">
-
-</div>
-
-</section>
-
-<!-- TEST SEARCH -->
-
-<section id="tests">
-
-<h2>Search Diagnostic Tests</h2>
-
-<div class="searchbox">
-
-<input type="text" id="searchTest" placeholder="Search any diagnostic test...">
+</a>
 
 </div>
 
-<div id="testList">
+`;
 
-<div class="testItem">
-<span>CBC</span>
-<a href="https://wa.me/919177317999?text=I want CBC Test"><button class="bookBtn">Book Test</button></a>
-</div>
+});
 
-<div class="testItem">
-<span>Hemoglobin</span>
-<a href="https://wa.me/919177317999?text=I want Hemoglobin Test"><button class="bookBtn">Book Test</button></a>
-</div>
+}
 
-<div class="testItem">
-<span>Blood Sugar</span>
-<a href="https://wa.me/919177317999?text=I want Blood Sugar Test"><button class="bookBtn">Book Test</button></a>
-</div>
+showTests(tests);
 
-<div class="testItem">
-<span>HbA1c</span>
-<a href="https://wa.me/919177317999?text=I want HbA1c Test"><button class="bookBtn">Book Test</button></a>
-</
+document.getElementById("searchInput").addEventListener("keyup",function(){
+
+let keyword=this.value.toLowerCase();
+
+let filtered=tests.filter(t=>t.toLowerCase().includes(keyword));
+
+showTests(filtered);
+
+});
+
+</script></body>
+</html>
