@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KKS Diagnostic Center</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:white;
+color:#333;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:15px 8%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+height:70px;
+}
+
+.logo h2{
+margin:0;
+color:#0b63ce;
+}
+
+nav a{
+margin:0 12px;
+text-decoration:none;
+color:#333;
+font-weight:600;
+}
+
+/* HERO */
+
+.hero{
+height:480px;
+background:
+linear-gradient(rgba(0,90,170,0.6),rgba(0,90,170,0.6)),
+url("https://images.pexels.com/photos/8460049/pexels-photo-8460049.jpeg")
+center/cover no-repeat;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+/* SECTION */
+
+section{
+padding:60px 10%;
+}
+
+h2{
+text-align:center;
+color:#0b63ce;
+margin-bottom:30px;
+}
+
+/* SEARCH */
+
+.searchBox{
+text-align:center;
+}
+
+.searchBox input{
+width:60%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+/* TEST LIST */
+
+.test{
+display:flex;
+justify-content:space-between;
+background:#f2f7ff;
+padding:10px;
+margin:6px 0;
+border-radius:6px;
+}
+
+.bookBtn{
+background:#25D366;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* PACKAGES */
+
+.packages{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+border-radius:10px;
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:170px;
+object-fit:cover;
+}
+
+.card h3{
+padding:10px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:8px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+}
+
+.whatsapp img{
+width:60px;
+}
+
+/* MAP */
+
+iframe{
+width:100%;
+height:320px;
+border:0;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<img src="kks-logo.png" alt="KKS Diagnostic Center Logo">
+
+<h2>KKS Diagnostic Center</h2>
+
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#tests">Tests</a>
+<a href="#packages">Packages</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<h1>Accurate Diagnostic Testing</h1>
+
+<p>Reliable Results • Advanced Laboratory • Trusted Care</p>
+
+</div>
+
+</section>
+
+
+<!-- SEARCH TESTS -->
+
+<section id="tests">
+
+<h2>Search Diagnostic Tests</h2>
+
+<div class="searchBox">
+
+<input type="text" id="searchInput" placeholder="Search 200+ diagnostic tests">
+
+</div>
+
+<div id="testList"></div>
+
+</section>
+
+
+<!-- HEALTH PACKAGES -->
+
+<section id="packages">
+
+<h2>Health Packages</h2>
+
+<div class="packages">
+
+<div class="card">
+<img src="https://images.pexels.com/photos/8460157/pexels-photo-8460157.jpeg">
+<h3>Fever Profile</h3>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/7088488/pexels-photo-7088488.jpeg">
+<h3>Diabetes Check</h3>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/3786157/pexels-photo-3786157.jpeg">
+<h3>Full Body Checkup</h3>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LAB GALLERY -->
+
+<section>
+
+<h2>Our Laboratory</h2>
+
+<div class="gallery">
+
+<img src="https://images.pexels.com/photos/3825581/pexels-photo-3825581.jpeg">
+<img src="https://images.pexels.com/photos/3786157/pexels-photo-3786157.jpeg">
+<img src="https://images.pexels.com/photos/7088488/pexels-photo-7088488.jpeg">
+<img src="https://images.pexels.com/photos/8460049/pexels-photo-8460049.jpeg">
+
+</div>
+
+</section>
+
+
+<!-- HOME COLLECTION -->
+
+<section>
+
+<h2>Home Sample Collection</h2>
+
+<p style="text-align:center">
+Book blood test from home easily via WhatsApp
+</p>
+
+<div style="text-align:center">
+
+<a href="https://wa.me/919177317999?text=I want home sample collection">
+
+<button class="bookBtn">
+Book Home Collection
+</button>
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Contact & Location</h2>
+
+<p style="text-align:center">
+
+📍 Shop No.4, Durgamma Talli Temple VS Complex  
+Main Road, Vadapalli – 533238  
+
+📞 9177317999  
+
+</p>
+
+<iframe src="https://maps.google.com/maps?q=Vadapalli%20533238&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</section>
+
+
+<!-- WHATSAPP FLOAT -->
+
+<a class="whatsapp" href="https://wa.me/919177317999">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+
+</a>
+
+
+<script>
+
+const tests=[
+
+"CBC","Hemoglobin","RBC","WBC","Platelet Count",
+"Blood Sugar","HbA1c","Vitamin D3","Vitamin B12",
+"TSH","T3","T4","Cholesterol","Triglycerides",
+"HDL","LDL","Urea","Creatinine","Uric Acid",
+"Ferritin","Calcium","CRP","ESR","HIV",
+"HbsAg","Dengue","Malaria","Widal","Troponin"
+
+];
+
+document.getElementById("searchInput").addEventListener("keyup",function(){
+
+let keyword=this.value.toLowerCase();
+
+let results=tests.filter(t=>t.toLowerCase().includes(keyword));
+
+let html="";
+
+results.forEach(test=>{
+
+html+=`
+
+<div class="test">
+
+<span>${test}</span>
+
+<a href="https://wa.me/919177317999?text=I want to book ${test} test">
+
+<button class="bookBtn">Book Test</button>
+
+</a>
+
+</div>
+kks-logo.pngindex.html
+kks-logo.png
+`;
+
+});
+
+document.getElementById("testList").innerHTML=html;
+
+});
+
+</script>
+
+</body>
+
+</html>
