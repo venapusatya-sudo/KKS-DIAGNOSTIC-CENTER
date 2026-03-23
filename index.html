@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KKS Diagnosis Centre</title>
+
+<style>
+
+body{margin:0;font-family:Arial;background:#f4f7fb;}
+
+/* HEADER */
+header{
+display:flex;
+align-items:center;
+padding:15px 30px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+header img{height:60px;}
+nav{margin-left:auto;}
+nav a{margin:10px;text-decoration:none;color:#333;font-weight:bold;}
+
+/* HERO */
+.hero{
+background:#0b6efd;
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+.hero input{
+padding:12px;
+width:300px;
+border:none;
+border-radius:5px;
+margin-top:10px;
+}
+
+/* SLIDER */
+.slider{
+overflow:hidden;
+white-space:nowrap;
+}
+
+.slider img{
+height:200px;
+margin:10px;
+border-radius:10px;
+}
+
+/* SECTION */
+.section{padding:40px;text-align:center;}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+/* CARD */
+.card{
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card img{width:100%;border-radius:10px;}
+
+/* MAP */
+iframe{
+width:100%;
+height:300px;
+border:0;
+border-radius:10px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+font-size:20px;
+}
+
+/* FOOTER */
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+<img src="logo.png" alt="Logo">
+<nav>
+<a href="#">Home</a>
+<a href="#">Tests</a>
+<a href="#">Packages</a>
+<a href="#">Contact</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+<h1>KKS Diagnosis Centre</h1>
+<p>200+ Tests Available • Home Sample Collection</p>
+<input type="text" id="search" placeholder="Search test like CBC, Thyroid..." onkeyup="searchTest()">
+</div>
+
+<!-- YOUR POSTER IMAGE -->
+<div class="section">
+<img src="diagnosis.jpg" style="width:90%;border-radius:10px;">
+</div>
+
+<!-- AUTO IMAGE SLIDER -->
+<div class="slider" id="slider">
+
+<img src="https://images.unsplash.com/photo-1581595219315-a187dd40c322">
+<img src="https://images.unsplash.com/photo-1579154204601-01588f351e67">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<img src="https://images.unsplash.com/photo-1580281657521-9d2c3e7f2f9d">
+<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118">
+<img src="https://images.unsplash.com/photo-1581093588401-22d7c7dce6e8">
+<img src="https://images.unsplash.com/photo-1580281780460-82d277a9c2f8">
+<img src="https://images.unsplash.com/photo-1579165466741-7f35e4755183">
+<img src="https://images.unsplash.com/photo-1582719478170-68a0c19a96c5">
+<img src="https://images.unsplash.com/photo-1581091012184-5c6b1cfd7f4c">
+<img src="https://images.unsplash.com/photo-1580281657521-9d2c3e7f2f9d">
+<img src="https://images.unsplash.com/photo-1581595219315-a187dd40c322">
+
+</div>
+
+<!-- FACILITIES -->
+<div class="section">
+
+<h2>Our Facilities</h2>
+
+<div class="grid">
+
+<div class="card"><img src="https://images.unsplash.com/photo-1579154204601-01588f351e67"><h3>Blood Test</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"><h3>Microscope Analysis</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1580281657521-9d2c3e7f2f9d"><h3>Advanced Equipment</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118"><h3>Home Collection</h3></div>
+
+</div>
+
+</div>
+
+<!-- TEST LIST -->
+<div class="section">
+
+<h2>200+ Tests Available</h2>
+
+<ul id="testList">
+<li>CBC</li>
+<li>FBS</li>
+<li>PPBS</li>
+<li>Lipid Profile</li>
+<li>LFT</li>
+<li>RFT</li>
+<li>Thyroid Profile</li>
+<li>CRP</li>
+<li>Blood Group</li>
+</ul>
+
+</div>
+
+<!-- CONTACT -->
+<div class="section">
+
+<h2>Contact Us</h2>
+
+<p>📍 Ravulapalem, Andhra Pradesh</p>
+<p>📞 +91 77320 94748</p>
+
+<iframe src="https://maps.google.com/maps?q=Ravulapalem&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</div>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/917732094748">W</a>
+
+<footer>
+<p>© 2026 KKS Diagnosis Centre</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+
+/* AUTO SCROLL */
+let slider = document.getElementById("slider");
+setInterval(()=>{
+slider.scrollLeft += 1;
+},20);
+
+/* SEARCH FUNCTION */
+function searchTest(){
+let input = document.getElementById("search").value.toLowerCase();
+let items = document.querySelectorAll("#testList li");
+
+items.forEach(item=>{
+item.style.display = item.innerText.toLowerCase().includes(input) ? "" : "none";
+});
+}
+
+</script>
+
+</body>
+</html>
